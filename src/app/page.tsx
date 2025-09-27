@@ -11,6 +11,7 @@ import JobPage from "./components/JobPage";
 import GennextPage from "./components/GennextPage";
 import Cradlepage from "./components/Cradlepage";
 import Resandcafe from "./components/Resandcafe";
+import Unmesapage from "./components/Unmesapage";
 
 const companyDetails = [
   {
@@ -52,6 +53,16 @@ const companyDetails = [
     ],
     client: "Res&Cafe",
     techStack: ["UI/UX Designer"],
+  },
+  {
+    logo: "/unmesa/unmesa-logo.svg",
+    job: "Full Stack Developer & Designer",
+    text: [
+      "At Unmesa.ai, I designed and developed a comprehensive AI-powered platform that revolutionizes how businesses interact with artificial intelligence. I created an intuitive user interface that makes complex AI capabilities accessible to users of all technical backgrounds.",
+      "The platform features a modern, responsive design built with cutting-edge technologies, focusing on seamless user experience and powerful functionality. I handled both the frontend development and backend integration, ensuring optimal performance and scalability.",
+    ],
+    client: "Unmesa.ai",
+    techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
   },
 ];
 
@@ -156,9 +167,14 @@ export default function Home() {
           <GennextPage />
         </section>
 
-        <section id="gennext-project" className="hidden md:block lg:block">
+        <section id="resandcafe-project" className="hidden md:block lg:block">
           <JobPage company={companyDetails[3]} />
           <Resandcafe />
+        </section>
+
+        <section id="unmesa-project" className="hidden md:block lg:block">
+          <JobPage company={companyDetails[4]} />
+          <Unmesapage />
         </section>
 
         <section id="dev projects">

@@ -23,10 +23,22 @@ const projects = [
   },
   {
     title: "Edwance.ai",
-    desc: "End-to-end design and development of Edwance.ai’s landing page and dashboard, while driving the product’s growth from concept to a fully scaled service.",
+    desc: "End-to-end design and development of Edwance.ai's landing page and dashboard, while driving the product's growth from concept to a fully scaled service.",
     image: "/edwance-landing.png",
     tech: ["Next.js", "Typescript", "Tailwind CSS"],
     link: "https://www.edwance.ai/",
+  },
+  {
+    title: "Gennext IT",
+    desc: "Designed and developed the official company website with modern, responsive frontend focusing on clear user flows and intuitive navigation to enhance user engagement.",
+    image: "/gennextit.png",
+    tech: ["React.js", "JavaScript", "Framer"],
+  },
+  {
+    title: "Unmesa.ai",
+    desc: "Designed and developed a comprehensive AI-powered platform that revolutionizes how businesses interact with artificial intelligence, featuring intuitive UI and powerful functionality.",
+    image: "/unmesa/Unmesa-laptop.png",
+    tech: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
   },
 ];
 
