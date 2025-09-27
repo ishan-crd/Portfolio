@@ -5,8 +5,6 @@ const projects = [
     desc: "Completely responsive E-Commerce platform for modern gym aparrel selling along with complete design and checkout.",
     image: "/cradle.png",
     tech: ["React.js", "Javascript", "Material-UI"],
-    link: "https://cradle-clothing.vercel.app/",
-    github: "https://github.com/ishan-crd/CradleClothing",
   },
   {
     title: "Insyd",
@@ -16,17 +14,15 @@ const projects = [
   },
   {
     title: "Tangle",
-    desc: "Led the end-to-end design and development of Tangle’s MVP, transforming the idea from concept to a functional, user-ready product.",
+    desc: "Led the end-to-end design and development of Tangle's MVP, transforming the idea from concept to a functional, user-ready product.",
     image: "/tangle-des.png",
     tech: ["React Native", "Typescript", "Nativewind"],
-    link: "https://wearquery-fw31.vercel.app/",
   },
   {
     title: "Edwance.ai",
     desc: "End-to-end design and development of Edwance.ai's landing page and dashboard, while driving the product's growth from concept to a fully scaled service.",
     image: "/edwance-landing.png",
     tech: ["Next.js", "Typescript", "Tailwind CSS"],
-    link: "https://www.edwance.ai/",
   },
   {
     title: "Gennext IT",
