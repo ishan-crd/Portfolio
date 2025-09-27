@@ -4,7 +4,6 @@ import TechStack from "./components/TechStack";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contacts";
-import Footer from "./components/Footer";
 // import DesignProjects from "./components/DesignProjects";
 import Insydpage from "./components/Insydpage";
 import JobPage from "./components/JobPage";
@@ -189,7 +188,6 @@ export default function Home() {
           <Contact />
         </section>
       </main>
-      <Footer />
     </div>
   );
 }
