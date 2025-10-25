@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=TASA+Orbiter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
+@import "tailwindcss";
+
+/* Local fonts */
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Humane-Bold';
+  src: url('/fonts/Humane-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tailwind v4 theme vars */
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --font-tasa: 'TASA Orbiter', sans-serif;
+  --font-geist: 'Geist', sans-serif;
+  --font-humane: 'Humane-Bold', sans-serif;
+}
+
+@theme{
+  --font-display:"Bitcount Grid Single",sans-serif;
+}
