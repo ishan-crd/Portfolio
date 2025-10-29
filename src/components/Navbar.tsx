@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 className=" w-screen h-fit">
-                <div className="flex items-center justify-between whitespace-nowrap w-screen font-lexend p-2 px-4 text-xs md:text-lg scroll-smooth text-[#1f1f1f]">
+                <div className="flex items-center justify-between whitespace-nowrap w-screen font-inter-display font-semibold p-2 px-4 text-xs md:text-lg scroll-smooth text-[#1f1f1f]">
                     <div className="whitespace-nowrap cursor-default">
                         ©Himanshu
                     </div>

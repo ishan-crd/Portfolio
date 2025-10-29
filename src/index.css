@@ -29,6 +29,35 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: Inter Display Bold;
+  src: url("assets/fonts/InterDisplay-Bold.ttf");
+}
+
+@theme {
+  --font-inter-display-bold: "Inter Display Bold", sans-serif;
+}
+
+@font-face {
+  font-family: Inter Display;
+  src: url("assets/fonts/InterDisplay-Regular.ttf");
+}
+
+@theme {
+  --font-inter-display: "Inter Display", sans-serif;
+}
+
+@font-face {
+  font-family: DM Mono;
+  src: url("assets/fonts/DMMono-Light.ttf");
+}
+
+@theme {
+  --font-dm-mono: "DM Mono", sans-serif;
+}
+
+
+
 /* Tailwind v4 theme vars */
 @theme {
   --font-inter: 'Inter', sans-serif;
@@ -55,4 +84,9 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  color: transparent;
 }

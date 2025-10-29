@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
                             initial={{ opacity: 0, x: "50%" }}
                             animate={{ opacity: 1, x: "0%" }}
                             transition={{ duration: 1 }}
-                            className="font-display text-xl md:text-5xl">
+                            className="font-tasa text-xl md:text-5xl">
                             Chaudhary
                         </motion.div>
                     </div>
@@ -42,21 +42,21 @@ const Hero: React.FC = () => {
                             animate={{ opacity: 1, x: "1%" }}
                             transition={{ duration: 1 }}
                             className="font-tasa text-2xl flex flex-col gap-4 justify-center items-start w-full">
-                            <div>
-                                <FaTwitter />
+                            <div className="flex justify-center items-center gap-2">
+                                <FaTwitter /> Twitter
                             </div>
-                            <div>
-                                <FaGithub />
+                            <div className="flex justify-center items-center gap-2">
+                                <FaGithub /> Github
                             </div>
-                            <div>
-                                <FaLinkedin />
+                            <div className="flex justify-center items-center gap-2">
+                                <FaLinkedin /> LinkedIn
                             </div>
                         </motion.div>
                     </div>
-                    <div className="font-lexend">
+                    <div className="font-inter-display-bold">
                         <motion.p
                             className="text-2xl whitespace-nowrap p-5 md:text-4xl lg:text-6xl"
-                           initial={{ opacity: 0, y: "10%" }}
+                            initial={{ opacity: 0, y: "10%" }}
                             animate={{ opacity: 1, y: "0%" }}
                             transition={{ duration: 1, delay: .5 }}>
                             //Web Developer
