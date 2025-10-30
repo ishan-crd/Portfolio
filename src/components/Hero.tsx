@@ -41,15 +41,15 @@ const Hero: React.FC = () => {
                             initial={{ opacity: 0, x: "-10%" }}
                             animate={{ opacity: 1, x: "1%" }}
                             transition={{ duration: 1 }}
-                            className="font-tasa text-2xl flex flex-col gap-4 justify-center items-start w-full">
+                            className="font-tasa text-base flex flex-col gap-4 justify-center items-start w-full">
                             <div className="flex justify-center items-center gap-2">
-                                <FaTwitter /> Twitter
+                                <FaTwitter size={25} /> Twitter
                             </div>
                             <div className="flex justify-center items-center gap-2">
-                                <FaGithub /> Github
+                                <FaGithub size={25} /> Github
                             </div>
                             <div className="flex justify-center items-center gap-2">
-                                <FaLinkedin /> LinkedIn
+                                <FaLinkedin size={25} /> LinkedIn
                             </div>
                         </motion.div>
                     </div>

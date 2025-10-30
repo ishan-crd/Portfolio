@@ -17,7 +17,7 @@ const backendFrameworks: Framework[] = [
     {
         sno: 2,
         name: "Express.js",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
+        logo: "src/assets/svg/express-svgrepo-com.svg",
     },
     {
         sno: 3,
@@ -67,7 +67,7 @@ const frontendFrameworks: Framework[] = [
     {
         sno: 6,
         name: "Next.js",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
+        logo: "src/assets/svg/next-js-svgrepo-com.svg",
     },
     {
         sno: 7,
@@ -85,7 +85,7 @@ const tools: Framework[] = [
     {
         sno: 2,
         name: "GitHub",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+        logo: "src/assets/svg/github.svg",
     },
     {
         sno: 3,
@@ -109,6 +109,33 @@ const tools: Framework[] = [
     },
 ];
 
+const otherTools: Framework[] = [
+    {
+        sno: 1,
+        name: "Vercel",
+        logo: "src/assets/svg/vercel-fill-svgrepo-com.svg",
+    },
+    {
+        sno: 2,
+        name: "Render",
+        logo: "src/assets/svg/render-seeklogo.svg",
+    },
+    {
+        sno: 3,
+        name: "Redux",
+        logo: "src/assets/svg/redux-svgrepo-com.svg",
+    },
+    {
+        sno: 4,
+        name: "ChatGPT",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+    },
+    {
+        sno: 5,
+        name: "Gemini",
+        logo: "src/assets/svg/gemini-color.svg",
+    },
+];
 
 
 
@@ -119,10 +146,13 @@ const Services: React.FC = () => {
     const frontendRef = useRef<HTMLDivElement>(null);
     const backendRef = useRef<HTMLDivElement>(null);
     const toolsRef = useRef<HTMLDivElement>(null);
+    const otherToolsRef = useRef<HTMLDivElement>(null);
 
-    const frontendInView = useInView(frontendRef, { amount: .7 })
-    const backendInView = useInView(backendRef, { amount: .9 })
+    const frontendInView = useInView(frontendRef, { amount: .5 })
+    const backendInView = useInView(backendRef, { amount: .5 })
     const toolsInView = useInView(toolsRef, { amount: .5 })
+    const otherToolsInView = useInView(otherToolsRef, { amount: .2 })
+
 
     const options: MotionProps = {
         initial: { opacity: 0, y: "15%" },
@@ -134,13 +164,20 @@ const Services: React.FC = () => {
         if (frontendInView) setNumber("01");
         if (backendInView) setNumber("02");
         if (toolsInView) setNumber("03");
-    }, [frontendInView, backendInView, toolsInView]);
+        if (otherToolsInView) setNumber("04");
+    }, [frontendInView, backendInView, toolsInView,otherToolsInView]);
+
+    const [isWide, setIsWide] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (window.innerWidth > 768) setIsWide(true);
+    }, []);
 
     return (
         <>
             <div className=" w-full h-full p-5 min-h-screen border-b border-[#403b3b] relative flex flex-col justify-center items-center gap-4"
                 id="tech-stack">
-                <motion.div className="text-[#f05038] text-sm sm:text-lg font-inter-display w-full sticky left-2 top-2"
+                <motion.div className="text-[#f05038] text-sm sm:text-lg font-inter-display w-full sticky left-2 top-2 z-10"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
@@ -153,23 +190,23 @@ const Services: React.FC = () => {
                     </span>
                 </motion.div>
                 <div className="flex flex-row justify-between items-start h-5/6 w-full p-5 ">
-                    <div className="text-xl text-outline w-1/4 sticky top-0 left-0">
+                    {isWide && <div className="text-xl text-outline w-1/4 sticky top-50 left-0">
                         <motion.h1
                             key={number}
                             initial={{ rotateY: 0 }}
                             animate={{ rotateY: 360 }}
                             transition={{ duration: 1 }}
-                            className="font-dm-mono text-[25rem] ">
+                            className="font-dm-mono text-[9rem] lg:text-[17rem] hidden md:block  xl:text-[25rem] ">
                             {number}
                         </motion.h1>
-                    </div>
-                    <div className="flex flex-col justify-center items-center gap-36 relative w-3/4">
-                        <div className="flex gap-10 flex-col font-inter-display ">
-                            <motion.span className="text-7xl font-inter-display-bold"
-                                 {...options}>
+                    </div>}
+                    <div className="flex flex-col justify-center items-center gap-10 lg:gap-36 relative w-full lg:w-3/4">
+                        <div className="flex justify-center gap-5 lg:gap-10 flex-col font-inter-display w-full lg:w-3/4">
+                            <motion.span className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-inter-display-bold"
+                                {...options}>
                                 Frontend Development
                             </motion.span>
-                            <motion.p className="w-4/6 text-[#a7a0a0]"
+                            <motion.p className="w-6/6 text-[#a7a0a0] text-sm md:text-base"
                                 initial={{ opacity: 0, y: "15%" }}
                                 whileInView={{ opacity: 1, y: "0%" }}
                                 transition={{ duration: 1, delay: .3 }}
@@ -178,17 +215,16 @@ const Services: React.FC = () => {
                             </motion.p>
                             <div ref={frontendRef}>
                                 {frontendFrameworks.map((f) => (
-                                    <List sno={f.sno} name={f.name} logo={f.logo} />
+                                    <List key={f.sno} sno={f.sno} name={f.name} logo={f.logo} />
                                 ))}
                             </div>
                         </div>
-                        <div className="flex gap-10 flex-col font-inter-display ">
-                            <motion.span
-                                {...options}
-                                className="text-7xl font-inter-display-bold" >
+                        <div className="flex gap-5 lg:gap-10 flex-col font-inter-display w-full lg:w-3/4">
+                            <motion.span className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-inter-display-bold"
+                                {...options}>
                                 Backend Development
                             </motion.span>
-                            <motion.p className="w-4/6 text-[#a7a0a0]"
+                            <motion.p className="w-6/6 text-[#a7a0a0] text-sm md:text-base"
                                 initial={{ opacity: 0, y: "15%" }}
                                 whileInView={{ opacity: 1, y: "0%" }}
                                 transition={{ duration: 1, delay: .3 }}
@@ -197,16 +233,16 @@ const Services: React.FC = () => {
                             </motion.p>
                             <div ref={backendRef}>
                                 {backendFrameworks.map((f) => (
-                                    <List sno={f.sno} name={f.name} logo={f.logo} />
+                                    <List key={f.sno} sno={f.sno} name={f.name} logo={f.logo} />
                                 ))}
                             </div>
                         </div>
-                        <div className="flex gap-10 flex-col font-inter-display ">
-                            <motion.span className="text-7xl font-inter-display-bold"
-                               {...options}>
+                        <div className="flex gap-5 lg:gap-10 flex-col font-inter-display w-full lg:w-3/4">
+                            <motion.span className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-inter-display-bold"
+                                {...options}>
                                 Tools
                             </motion.span>
-                            <motion.p className="w-4/6 text-[#a7a0a0]"
+                            <motion.p className="w-6/6 text-[#a7a0a0] text-sm md:text-base"
                                 initial={{ opacity: 0, y: "15%" }}
                                 whileInView={{ opacity: 1, y: "0%" }}
                                 transition={{ duration: 1, delay: .3 }}
@@ -216,10 +252,36 @@ const Services: React.FC = () => {
                             <motion.div
                                 ref={toolsRef}>
                                 {tools.map((f) => (
-                                    <List sno={f.sno} name={f.name} logo={f.logo} />
+                                    <List key={f.sno} sno={f.sno} name={f.name} logo={f.logo} />
                                 ))}
                             </motion.div>
                         </div>
+                        <div className="flex gap-5 lg:gap-10 flex-col font-inter-display w-full lg:w-3/4">
+                            <motion.span
+                                className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-inter-display-bold"
+                                {...options}
+                            >
+                                Other Tools & Frameworks
+                            </motion.span>
+
+                            <motion.p
+                                className="w-full lg:w-5/6 text-[#a7a0a0] text-sm md:text-base"
+                                initial={{ opacity: 0, y: "15%" }}
+                                whileInView={{ opacity: 1, y: "0%" }}
+                                transition={{ duration: 1, delay: 0.3 }}
+                                viewport={{ once: true }}
+                            >
+                                I use modern tools and platforms like Vercel, Redux, and Gemini to deploy, optimize,
+                                and scale digital experiences seamlessly.
+                            </motion.p>
+
+                            <motion.div ref={otherToolsRef}>
+                                {otherTools.map((f) => (
+                                    <List key={f.sno} sno={f.sno} name={f.name} logo={f.logo} />
+                                ))}
+                            </motion.div>
+                        </div>
+
                     </div>
                 </div>
             </div>

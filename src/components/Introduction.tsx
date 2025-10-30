@@ -29,20 +29,20 @@ const Introduction: React.FC = () => {
                         </p>
                     </motion.div>
                 </div>
-                <div className="text-gray-300 w-full flex justify-center items-end flex-col">
-                    <motion.span className="w-3/4 md:w-5/12 text-xs sm:text-sm lg:text-base font-lexend "
+                <div className="text-gray-300 w-full flex justify-center items-end flex-col font-lexend">
+                    <motion.span className="w-3/4 md:w-5/12 text-xs sm:text-sm lg:text-base  "
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: .5 }}
-                        viewport={{ once: true, amount: 0.3 }}>
+                        viewport={{ once: true}}>
                         I turn ideas into polished, functional websites with clean, efficient code. My focus is on smooth, scalable solutions that make a real impact.
                     </motion.span>
                     <motion.div className="flex justify-end items-end w-full "
                         initial={{ opacity: 0, y: "10%" }}
                         whileInView={{ opacity: 1, y: "0%" }}
                         transition={{ duration: 1, delay: .7 }}
-                        viewport={{ once: true, amount: 0.7 }}>
-                        <span className="px-5 py-2 rounded-md border-2 w-fit h-fit flex justify-center items-center gap-1 hover:bg-black transition-all ease-in duration-75 hover:text-white cursor-pointer text-base m-5">
+                        viewport={{ once: true}}>
+                        <span className="px-2 py-1 md:px-5 md:py-2 rounded-md border-2 w-fit h-fit flex justify-center items-center gap-1 hover:bg-black transition-all ease-in duration-75 hover:text-white cursor-pointer  text-xs md:text-base m-5">
                             See my work!
                         </span>
                     </motion.div>
