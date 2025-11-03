@@ -1,9 +1,17 @@
 const experiences = [
   {
+    company: "Den.show",
+    role: "Full Stack Developer - Intern",
+    type: "Full Time",
+    duration: "Completed",
+    period: "",
+    description: "Helped builing this Web3 Streaming Platform from scratch. Worked with various tech like Privy, Convex, and more. Also worked with streaming players like MuxPlayer, LiveKit, and more.",
+  },
+  {
     company: "Edwance.ai",
     role: "Front End Developer - Intern",
     type: "Full Time",
-    duration: "Ongoing",
+    duration: "Completed",
     period: "July 2025 - Ongoing",
     description: "Spearheading the end-to-end design and development of Edwance.ai’s landing page and dashboard, while driving the product’s growth from concept to a fully scaled service.",
   },
