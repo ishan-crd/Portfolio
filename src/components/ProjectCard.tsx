@@ -1,0 +1,110 @@
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useState, useRef } from "react";
+import { MotionValue } from "framer-motion"
+
+
+//icons
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
+
+
+
+interface CardProps {
+    projectName: string,
+    image: Array<string>,
+    githubLink: string,
+    deployLink: string,
+    about: string,
+    date: string,
+    containerProgressY: MotionValue<number>,
+    range: Array<number>,
+    target: Array<number>
+}
+
+const ProjectCard: React.FC<CardProps> = ({ projectName, image, githubLink, deployLink, about, date, containerProgressY, range, target }) => {
+    const [currentImage, setCurrentImage] = useState<number>(0)
+
+    const cardRef = useRef(null);
+
+    const opacity: MotionValue<number> = useTransform(containerProgressY, range, [1, .6]);
+    const scale: MotionValue<number> = useTransform(containerProgressY, range, [1, .6]);
+
+
+
+    function forwardImage() {
+        if (currentImage === image.length - 1) {
+            setCurrentImage(0)
+
+        } else {
+            setCurrentImage(currentImage + 1)
+        }
+    }
+
+    function previousImage() {
+        if (currentImage === 0) {
+            setCurrentImage(image.length - 1)
+        } else {
+            setCurrentImage(currentImage - 1)
+        }
+    }
+
+
+    return (
+        <>
+            <motion.div
+                ref={cardRef}
+                className="flex justify-between md:justify-center flex-col md:flex-row items-center rounded-md h-[90vh] lg:h-[85vh] md:p-2 w-23/24 z-0 sticky top-10 lg:top-20 md:gap-2 font-inter-display-bold bg-[#121111]  }"
+                style={{ opacity, scale }}>
+                <div className="w-full h-full md:w-4/6 md:h-4/4 " >
+                    <span className="relative">
+                        <div className="absolute flex justify-between items-center w-full h-full p-2 lg:p-5 select-none ">
+                            <span className="p-2 rounded-full bg-[#403b3b] hover:bg-black hover:scale-150 transition-all duration-75 ease-in">
+                                <FaArrowLeft onClick={previousImage} />
+                            </span>
+                            <span className="p-2 rounded-full bg-[#403b3b] hover:bg-black hover:scale-150 transition-all duration-75 ease-in" onClick={forwardImage}>
+                                <FaArrowRight />
+                            </span>
+                        </div>
+                        <img src={image[currentImage]} alt="" className="border border-[#2c2929] h-55 sm:h-70 w-full md:h-4/4 md:w-6/6 rounded-2xl object-cover flex" />
+                    </span>
+                </div>
+                <div className="flex justify-between items-start gap-2 flex-col h-3/4 w-full md:w-2/6 md:h-full border border-[#2c2929] p-6 rounded-2xl">
+                    <div className="flex flex-col justify-between items-start gap-2 md:gap-4">
+                        <span className="font-dm-mono font-bold text-xs md:text-sm lg:text-base xl:text-xl">
+                            ({date})
+                        </span>
+                        <span className="text-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl">
+                            {projectName}
+                        </span>
+                        <span className="font-inter-display text-[#a29b9b] text-xs md:text-sm lg:text-base xl:text-lg">
+                            {about}
+                        </span>
+                    </div>
+                    <div className="flex flex-col w-full font-inter text-[#a29b9b] font-semibold text-xs lg:text-base ">
+                        <a href={githubLink}
+                            target="_blank"
+                            className="flex justify-start gap-2 items-center border-y p-2 " >
+                            <span className="hover:text-white">
+                                Github
+                            </span>
+                            <span>
+                                <FaExternalLinkAlt />
+                            </span></a>
+                        <a href={deployLink}
+                            target="_blank"
+                            className="flex justify-start gap-2 items-center border-y p-2 " >
+                            <span className="hover:text-white">
+                                Deployed Link
+                            </span>
+                            <span>
+                                <FaExternalLinkAlt />
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </motion.div >
+        </>
+    );
+};
+
+export default ProjectCard;

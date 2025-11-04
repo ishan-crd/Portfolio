@@ -134,13 +134,17 @@ const otherTools: Framework[] = [
         sno: 5,
         name: "Gemini",
         logo: "src/assets/svg/gemini-color.svg",
+    },{
+        sno: 6,
+        name: "Framer Motion",
+        logo: "src/assets/svg/Motion_Logo_0.svg",
     },
 ];
 
 
 
 
-const Services: React.FC = () => {
+const Techstack: React.FC = () => {
     const [number, setNumber] = useState<"01" | "02" | "03" | "04">("01");
 
     const frontendRef = useRef<HTMLDivElement>(null);
@@ -165,7 +169,7 @@ const Services: React.FC = () => {
         if (backendInView) setNumber("02");
         if (toolsInView) setNumber("03");
         if (otherToolsInView) setNumber("04");
-    }, [frontendInView, backendInView, toolsInView,otherToolsInView]);
+    }, [frontendInView, backendInView, toolsInView, otherToolsInView]);
 
     const [isWide, setIsWide] = useState<boolean>(false);
 
@@ -211,7 +215,7 @@ const Services: React.FC = () => {
                                 whileInView={{ opacity: 1, y: "0%" }}
                                 transition={{ duration: 1, delay: .3 }}
                                 viewport={{ once: true }}>
-                                I craft stunning, high-performance frontends that turn imagination into immersive digital reality.
+                                I craft responsive and dynamic UIs using React, Tailwind, and Framer Motion — blending speed, design, and smooth interactions into every pixel.
                             </motion.p>
                             <div ref={frontendRef}>
                                 {frontendFrameworks.map((f) => (
@@ -229,7 +233,7 @@ const Services: React.FC = () => {
                                 whileInView={{ opacity: 1, y: "0%" }}
                                 transition={{ duration: 1, delay: .3 }}
                                 viewport={{ once: true }}>
-                                I build powerful, secure backends that keep your apps fast, reliable, and always connected.
+                                I build reliable and scalable APIs using Node.js, Express, and MongoDB — focusing on clean architecture, security, and performance that keeps things running effortlessly.
                             </motion.p>
                             <div ref={backendRef}>
                                 {backendFrameworks.map((f) => (
@@ -247,7 +251,7 @@ const Services: React.FC = () => {
                                 whileInView={{ opacity: 1, y: "0%" }}
                                 transition={{ duration: 1, delay: .3 }}
                                 viewport={{ once: true }}>
-                                I build powerful, secure backends that keep your apps fast, reliable, and always connected.
+                                I use tools like Git, Postman, and Figma to collaborate, test, and design efficiently.
                             </motion.p>
                             <motion.div
                                 ref={toolsRef}>
@@ -290,4 +294,4 @@ const Services: React.FC = () => {
     )
 }
 
-export default Services;
+export default Techstack;

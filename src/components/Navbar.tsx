@@ -8,7 +8,8 @@ const Navbar: React.FC = () => {
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className=" w-screen h-fit">
+                className=" w-screen h-fit"
+                id="navbar">
                 <div className="flex items-center justify-between whitespace-nowrap w-screen font-inter-display font-semibold p-2 px-4 text-xs md:text-lg scroll-smooth text-[#1f1f1f]">
                     <div className="whitespace-nowrap cursor-default">
                         ©Himanshu
@@ -20,7 +21,7 @@ const Navbar: React.FC = () => {
                         <a href="#tech-stack">Tech Stack</a>
                     </div>
                     <div>
-                        <a href="#">Projects</a>
+                        <a href="#projects">Projects</a>
                     </div>
                 </div>
             </motion.div>
