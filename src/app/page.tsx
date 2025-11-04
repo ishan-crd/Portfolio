@@ -11,6 +11,7 @@ import GennextPage from "./components/GennextPage";
 import Cradlepage from "./components/Cradlepage";
 import Resandcafe from "./components/Resandcafe";
 import Unmesapage from "./components/Unmesapage";
+import Denpage from "./components/Denpage";
 
 const companyDetails = [
   {
@@ -61,6 +62,16 @@ const companyDetails = [
       "The platform features a modern, responsive design built with cutting-edge technologies, focusing on seamless user experience and powerful functionality. I handled both the frontend development and backend integration, ensuring optimal performance and scalability.",
     ],
     client: "Unmesa.ai",
+    techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+  },
+  {
+    logo: "/den/logo.svg",
+    job: "Full Stack Developer",
+    text: [
+      "For Den, I designed and developed a modern streaming platform with a retro-inspired aesthetic that connects creators and viewers. I crafted a light themed interface that emphasizes content discovery, live streaming, and interactive features like clips, leaderboards, and fan passes.",
+      "The platform features a lowkey retro vibe with a sleek navigation system, real-time notifications, and a seamless viewing experience. I implemented responsive design across desktop and mobile devices, ensuring the platform works beautifully on all screen sizes while maintaining its distinctive visual identity.",
+    ],
+    client: "Den",
     techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
   },
 ];
@@ -174,6 +185,11 @@ export default function Home() {
         <section id="unmesa-project" className="hidden md:block lg:block">
           <JobPage company={companyDetails[4]} />
           <Unmesapage />
+        </section>
+
+        <section id="den-project" className="hidden md:block lg:block">
+          <JobPage company={companyDetails[5]} />
+          <Denpage />
         </section>
 
         <section id="dev projects">

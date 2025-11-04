@@ -31,7 +31,7 @@ export default function Profile() {
           <div className="mb-8">
             <div className="flex flex-wrap gap-3 font-mono">
               <a
-                href="https://x.com/ishan_crd"
+                href="https://x.com/ishancrd"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-2 px-3 py-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 rounded-lg transition-all duration-200"

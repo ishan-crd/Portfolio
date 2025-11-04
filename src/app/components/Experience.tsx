@@ -12,7 +12,7 @@ const experiences = [
     role: "Front End Developer - Intern",
     type: "Full Time",
     duration: "Completed",
-    period: "July 2025 - Ongoing",
+    period: "July 2025 - October 2025",
     description: "Spearheading the end-to-end design and development of Edwance.ai’s landing page and dashboard, while driving the product’s growth from concept to a fully scaled service.",
   },
   {
