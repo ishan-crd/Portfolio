@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 //icons
 import { FaArrowUp, FaLinkedin } from "react-icons/fa";
 import { FaSquareGithub, FaSquareInstagram, FaSquareXTwitter } from "react-icons/fa6";
+import me1 from "../assets/videos/me1.gif";
 
 
 const Outro: React.FC = () => {
@@ -20,7 +21,7 @@ const Outro: React.FC = () => {
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1.1 }}
                         transition={{ duration: 1 }}>
-                        <img src="src\assets\videos\me1.gif" alt="Cool Animation" className="flex justify-center items-center w-70 h-70 md:h-90 lg:h-100 object-cover" />
+                        <img src={me1} alt="Cool Animation" className="flex justify-center items-center w-70 h-70 md:h-90 lg:h-100 object-cover" />
                     </motion.div>
                 </div>
                 <div className="flex justify-center items-center flex-col gap-2">

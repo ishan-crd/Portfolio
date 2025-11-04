@@ -10,21 +10,9 @@ import Outro from './components/Outro'
 
 function App() {
   // Initialize Lenis
-  const lenis = new Lenis({
+  const _lenis = new Lenis({
     autoRaf: true,
   });
-
-  // const { scrollYProgress } = useScroll();
-  // const [homeButton, setHomeButton] = useState<boolean>(false);
-
-  // useEffect(() => {
-  //   const unsubscribe = scrollYProgress.on("change", (latest: number) => {
-  //     setHomeButton(latest > 0.09); // adjust threshold if you want
-  //   });
-
-  //   return () => unsubscribe();
-  // }, [scrollYProgress]);
-
 
   return (
     <>

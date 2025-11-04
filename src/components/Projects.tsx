@@ -18,34 +18,54 @@ interface CardProps {
 }
 
 const Cards: Omit<CardProps, "containerProgressY" | "range" | "target">[] = [
-    {
-        "sno": 1,
-        "projectName": "Vastora",
-        "image": ["src/assets/images/vastora1.png", "src/assets/images/vastora2.png", "src/assets/images/vastora3.png", "src/assets/images/vastora4.png", "src/assets/images/vastora5.png"],
-        "githubLink": "https://github.com/himanshu1081/Vastora",
-        "date": "June 2025 - August 2025",
-        "deployLink": "https://vastora.vercel.app/",
-        "about": "Vastora is a YouTube-like web app where users can explore, watch, and share videos seamlessly. It’s built with React and a modern backend, focusing on smooth playback, dynamic recommendations, and a responsive, minimal interface. The goal is to bring the essence of YouTube with a custom, developer-driven touch."
-    }, {
-        "sno": 2,
-        "projectName": "Portfolio",
-        "image": ["src/assets/images/portfolio.png","src/assets/images/portfolio1.png", "src/assets/images/portfolio2.png", "src/assets/images/portfolio3.png", "src/assets/images/portfolio4.png",],
-        "githubLink": "https://github.com/himanshu1081/portfolio",
-        "date": "November 2025",
-        "deployLink": "https://himanshu-portfolio.vercel.app",
-        "about": "My personal developer portfolio built using Typescript, React, TailwindCSS, and Framer Motion animations."
-    },
-    {
-        "sno": 3,
-        "projectName": "Greenstone London",
-        "image": ["src/assets/images/greenstone.jpg","src/assets/images/greenstone1.png", "src/assets/images/greenstone2.png"],
-        "githubLink": "https://github.com/himanshu1081/GreenstoneLondon",
-        "date": "October 2025",
-        "deployLink": "https://greenstone-london-ju93.vercel.app",
-        "about": "Greenstone London — a clean, responsive landing page built using React and TailwindCSS. It showcases the brand’s presence with a modern design and includes a simple, user-friendly contact section for seamless communication."
-    }
+  {
+    sno: 1,
+    projectName: "Vastora",
+    image: [
+      "/images/vastora1.png",
+      "/images/vastora2.png",
+      "/images/vastora3.png",
+      "/images/vastora4.png",
+      "/images/vastora5.png",
+    ],
+    githubLink: "https://github.com/himanshu1081/Vastora",
+    date: "June 2025 - August 2025",
+    deployLink: "https://vastora.vercel.app/",
+    about:
+      "Vastora is a YouTube-like web app where users can explore, watch, and share videos seamlessly...",
+  },
+  {
+    sno: 2,
+    projectName: "Portfolio",
+    image: [
+      "/images/portfolio.png",
+      "/images/portfolio1.png",
+      "/images/portfolio2.png",
+      "/images/portfolio3.png",
+      "/images/portfolio4.png",
+    ],
+    githubLink: "https://github.com/himanshu1081/portfolio",
+    date: "November 2025",
+    deployLink: "https://himanshu-portfolio.vercel.app",
+    about:
+      "My personal developer portfolio built using Typescript, React, TailwindCSS, and Framer Motion animations.",
+  },
+  {
+    sno: 3,
+    projectName: "Greenstone London",
+    image: [
+      "/images/greenstone.jpg",
+      "/images/greenstone1.png",
+      "/images/greenstone2.png",
+    ],
+    githubLink: "https://github.com/himanshu1081/GreenstoneLondon",
+    date: "October 2025",
+    deployLink: "https://greenstone-london-ju93.vercel.app",
+    about:
+      "Greenstone London — a clean, responsive landing page built using React and TailwindCSS...",
+  },
+];
 
-]
 
 
 export default function ScrollStack() {

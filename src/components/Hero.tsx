@@ -1,10 +1,12 @@
 import { motion } from "motion/react"
+import TextType from "../utility/TextType";
+import Navbar from "../utility/Navbar";
 
 //icons
 import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 import { GoDownload } from "react-icons/go";
-import Navbar from "../utility/Navbar";
-import TextType from "../utility/TextType";
+import me2 from "../assets/videos/me2.gif";
+
 
 const Hero: React.FC = () => {
 
@@ -24,7 +26,7 @@ const Hero: React.FC = () => {
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1.1 }}
                         transition={{ duration: 1 }}>
-                        <img src="src\assets\videos\me2.gif" alt="Cool Animation" className="flex justify-center items-center w-70 h-70 md:h-90 lg:h-100 object-cover" />
+                        <img src={me2} alt="Cool Animation" className="flex justify-center items-center w-70 h-70 md:h-90 lg:h-100 object-cover" />
                         {/* <video src="src\assets\videos\my_character2.mp4" muted loop autoPlay className="flex justify-center items-center w-fit h-80 " ></video> */}
                     </motion.div>
                     <div className="flex justify-center items-start flex-col z-10">
