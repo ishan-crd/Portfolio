@@ -12,8 +12,8 @@ const Hero: React.FC = () => {
 
     const handleDownload = (): void => {
         const link = document.createElement('a');
-        link.href = "src/assets/files/resume.pdf"; // path from public folder
-        link.download = 'Himanshu_Resume.pdf'; // optional name
+        link.href = "/files/resume.pdf";
+        link.download = 'Himanshu_Resume.pdf';
         link.click();
     };
 

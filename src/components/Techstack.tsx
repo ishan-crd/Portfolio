@@ -7,139 +7,139 @@ import List from "../utility/List";
 
 import { useRef, useState, useEffect } from "react";
 
-
-const backendFrameworks: Framework[] = [
-    {
-        sno: 1,
-        name: "Node.js",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
-    },
-    {
-        sno: 2,
-        name: "Express.js",
-        logo: "src/assets/svg/express-svgrepo-com.svg",
-    },
-    {
-        sno: 3,
-        name: "MongoDB",
-        logo: "src/assets/svg/mongodb-svgrepo-com.svg",
-    },
-    {
-        sno: 4,
-        name: "JWT",
-        logo: "https://jwt.io/img/pic_logo.svg",
-    },
-];
-
-
 interface Framework {
     sno: number;
     name: string;
     logo: string;
 }
 
+const backendFrameworks: Framework[] = [
+  {
+    sno: 1,
+    name: "Node.js",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+  },
+  {
+    sno: 2,
+    name: "Express.js",
+    logo: "/svg/express-svgrepo-com.svg",
+  },
+  {
+    sno: 3,
+    name: "MongoDB",
+    logo: "/svg/mongodb-svgrepo-com.svg",
+  },
+  {
+    sno: 4,
+    name: "JWT",
+    logo: "https://jwt.io/img/pic_logo.svg",
+  },
+];
+
 const frontendFrameworks: Framework[] = [
-    {
-        sno: 1,
-        name: "HTML",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
-    },
-    {
-        sno: 2,
-        name: "CSS",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
-    },
-    {
-        sno: 3,
-        name: "JavaScript",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-    },
-    {
-        sno: 4,
-        name: "TypeScript",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-    },
-    {
-        sno: 5,
-        name: "React",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-    },
-    {
-        sno: 6,
-        name: "Next.js",
-        logo: "src/assets/svg/next-js-svgrepo-com.svg",
-    },
-    {
-        sno: 7,
-        name: "Tailwind CSS",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
-    },
+  {
+    sno: 1,
+    name: "HTML",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+  },
+  {
+    sno: 2,
+    name: "CSS",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+  },
+  {
+    sno: 3,
+    name: "JavaScript",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+  },
+  {
+    sno: 4,
+    name: "TypeScript",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
+  },
+  {
+    sno: 5,
+    name: "React",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+  },
+  {
+    sno: 6,
+    name: "Next.js",
+    logo: "/svg/next-js-svgrepo-com.svg",
+  },
+  {
+    sno: 7,
+    name: "Tailwind CSS",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+  },
 ];
 
 const tools: Framework[] = [
-    {
-        sno: 1,
-        name: "Git",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg",
-    },
-    {
-        sno: 2,
-        name: "GitHub",
-        logo: "src/assets/svg/github.svg",
-    },
-    {
-        sno: 3,
-        name: "VS Code",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
-    },
-    {
-        sno: 4,
-        name: "Postman",
-        logo: "src/assets/svg/postman-icon-svgrepo-com.svg",
-    },
-    {
-        sno: 5,
-        name: "Figma",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
-    },
-    {
-        sno: 6,
-        name: "npm",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg",
-    },
+  {
+    sno: 1,
+    name: "Git",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg",
+  },
+  {
+    sno: 2,
+    name: "GitHub",
+    logo: "/svg/github.svg",
+  },
+  {
+    sno: 3,
+    name: "VS Code",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
+  },
+  {
+    sno: 4,
+    name: "Postman",
+    logo: "/svg/postman-icon-svgrepo-com.svg",
+  },
+  {
+    sno: 5,
+    name: "Figma",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+  },
+  {
+    sno: 6,
+    name: "npm",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg",
+  },
 ];
 
 const otherTools: Framework[] = [
-    {
-        sno: 1,
-        name: "Vercel",
-        logo: "src/assets/svg/vercel-fill-svgrepo-com.svg",
-    },
-    {
-        sno: 2,
-        name: "Render",
-        logo: "src/assets/svg/render-seeklogo.svg",
-    },
-    {
-        sno: 3,
-        name: "Redux",
-        logo: "src/assets/svg/redux-svgrepo-com.svg",
-    },
-    {
-        sno: 4,
-        name: "ChatGPT",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
-    },
-    {
-        sno: 5,
-        name: "Gemini",
-        logo: "src/assets/svg/gemini-color.svg",
-    },{
-        sno: 6,
-        name: "Framer Motion",
-        logo: "src/assets/svg/Motion_Logo_0.svg",
-    },
+  {
+    sno: 1,
+    name: "Vercel",
+    logo: "/svg/vercel-fill-svgrepo-com.svg",
+  },
+  {
+    sno: 2,
+    name: "Render",
+    logo: "/svg/render-seeklogo.svg",
+  },
+  {
+    sno: 3,
+    name: "Redux",
+    logo: "/svg/redux-svgrepo-com.svg",
+  },
+  {
+    sno: 4,
+    name: "ChatGPT",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+  },
+  {
+    sno: 5,
+    name: "Gemini",
+    logo: "/svg/gemini-color.svg",
+  },
+  {
+    sno: 6,
+    name: "Framer Motion",
+    logo: "/svg/Motion_Logo_0.svg",
+  },
 ];
+
 
 
 
