@@ -11,11 +11,6 @@
 - Tailwind CSS  
 - Framer Motion  
 
-**Backend & Database:**
-- Node.js + Express.js  
-- MongoDB  
-- JWT Authentication  
-
 **Tools & Deployment:**
 - Vite  
 - Vercel (Hosting)  
@@ -38,9 +33,9 @@
 
 ```
 📁 src/
- ┣ 📂components/      # Reusable React components (Cards, Navbar, etc.)
+ ┣ 📂utility/      # Reusable React components (Cards, Navbar, etc.)
  ┣ 📂assets/          # SVGs, icons, and images
- ┣ 📂sections/        # Hero, About, Projects, Contact sections
+ ┣ 📂sections/        # Hero, Intro, Techstack, Projects
  ┣ 📜 App.tsx         # Root component
  ┗ 📜 main.tsx        # Entry point
 
@@ -107,7 +102,7 @@ BCA @ JIIT | **Full Stack Developer** | Tech Explorer
 
 ## 🪄 Quote
 
-> “Code is like humor. When you have to explain it, it’s bad.” — *Cory House*
+> “I am unemployed.” — *Himanshu Chaudhary*
 
 ---
 
