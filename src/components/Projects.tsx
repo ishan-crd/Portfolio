@@ -46,7 +46,7 @@ const Cards: Omit<CardProps, "containerProgressY" | "range" | "target">[] = [
     ],
     githubLink: "https://github.com/himanshu1081/portfolio",
     date: "November 2025",
-    deployLink: "https://himanshu-portfolio.vercel.app",
+    deployLink: "https://himanshu-chaudhary-portfolio.vercel.app/",
     about:
       "My personal developer portfolio built using Typescript, React, TailwindCSS, and Framer Motion animations.",
   },
