@@ -1,7 +1,7 @@
 import ProjectCard from "../utility/ProjectCard";
 import { motion, useScroll } from "motion/react"
-import { use, useEffect, useRef } from "react";
 import { MotionValue } from "framer-motion"
+import { useRef } from "react";
 
 
 interface CardProps {
@@ -17,7 +17,7 @@ interface CardProps {
     target: Array<number>
 }
 
-const Cards: CardProps[] = [
+const Cards: Omit<CardProps, "containerProgressY" | "range" | "target">[] = [
     {
         "sno": 1,
         "projectName": "Vastora",
