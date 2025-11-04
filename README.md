@@ -1,73 +1,117 @@
-# React + TypeScript + Vite
+# 🌐 Himanshu Chaudhary — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A personal portfolio website built to showcase my projects, skills, and journey as a **Full Stack Developer**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## React Compiler
+**Frontend:**
+- React + TypeScript  
+- Tailwind CSS  
+- Framer Motion  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Backend & Database:**
+- Node.js + Express.js  
+- MongoDB  
+- JWT Authentication  
 
-## Expanding the ESLint configuration
+**Tools & Deployment:**
+- Vite  
+- Vercel (Hosting)  
+- Git & GitHub  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🎨 Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- ⚡ **Fast & Responsive UI** — optimized with Vite and Tailwind CSS  
+- 🎥 **Smooth Animations** — powered by Framer Motion  
+- 🧠 **Dynamic Project Cards** — show both live demos and GitHub links  
+- 🔐 **Full Stack Workflow Ready** — designed to scale with backend integration  
+- 🌈 **Scroll-Based Motion Effects** — immersive and interactive user experience  
+- 💼 **Modern Developer Portfolio** — minimal, aesthetic, and performance-driven  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🧩 Folder Structure
+
+```
+📁 src/
+ ┣ 📂components/      # Reusable React components (Cards, Navbar, etc.)
+ ┣ 📂assets/          # SVGs, icons, and images
+ ┣ 📂sections/        # Hero, About, Projects, Contact sections
+ ┣ 📜 App.tsx         # Root component
+ ┗ 📜 main.tsx        # Entry point
+
+📁 public/
+ ┗ 📂images/          # Publicly served images and logos
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🖥️ Local Setup
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+To run this project locally:
+
+```bash
+# Clone the repo
+git clone https://github.com/himanshu1081/portfolio.git
+
+# Move into folder
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Run dev server
+npm run dev
 ```
+
+Now open [http://localhost:5173](http://localhost:5173) 🚀
+
+---
+
+## 🌍 Deployment
+
+Deployed on **Vercel** → [View Live](https://himanshu-chaudhary-portfolio.vercel.app/)
+
+To redeploy:
+1. Commit your latest changes  
+2. Push to GitHub  
+3. Vercel automatically rebuilds & updates your live site  
+
+---
+
+## 🧠 Highlights
+
+- 💡 Built with focus on **motion, design, and developer identity**  
+- 🌐 Includes **backend-ready structure** for future integration  
+- ⚙️ Optimized with Vite’s blazing fast build system  
+- 📱 Fully responsive across all devices  
+- 🎯 Clean UI transitions powered by Framer Motion  
+
+---
+
+## 🧑‍💻 Author
+
+**Himanshu Chaudhary**  
+BCA @ JIIT | **Full Stack Developer** | Tech Explorer  
+📍 Noida, India  
+
+- Instagram: [@hiwnshuuu](https://www.instagram.com/hiwnshuuu/)  
+- GitHub: [himanshu1081](https://github.com/himanshu1081)  
+- LinkedIn: [himanshu1081](https://www.linkedin.com/in/himanshu1081/)
+
+---
+
+## 🪄 Quote
+
+> “Code is like humor. When you have to explain it, it’s bad.” — *Cory House*
+
+---
+
+### 🏁 License
+
+This project is open-source under the **[MIT License](LICENSE)**.  
+Feel free to fork, learn, and create your own version ✨
