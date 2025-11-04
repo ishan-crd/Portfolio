@@ -3,7 +3,8 @@ import { motion } from "motion/react"
 //icons
 import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 import { GoDownload } from "react-icons/go";
-import Navbar from "./Navbar";
+import Navbar from "../utility/Navbar";
+import TextType from "../utility/TextType";
 
 const Hero: React.FC = () => {
 
@@ -31,14 +32,14 @@ const Hero: React.FC = () => {
                             initial={{ opacity: 0, x: "-50%" }}
                             animate={{ opacity: 1, x: "0%" }}
                             transition={{ duration: 1 }}
-                            className="font-tasa text-5xl md:text-7xl lg:text-9xl" id="hero">
+                            className="font-inter-display-bold text-5xl md:text-7xl lg:text-9xl" id="hero">
                             Himanshu
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: "50%" }}
                             animate={{ opacity: 1, x: "0%" }}
                             transition={{ duration: 1 }}
-                            className="font-tasa text-xl md:text-5xl">
+                            className="font-inter-display-bold text-xl md:text-5xl">
                             Chaudhary
                         </motion.div>
                     </div>
@@ -50,25 +51,32 @@ const Hero: React.FC = () => {
                             animate={{ opacity: 1, x: "1%" }}
                             transition={{ duration: 1 }}
                             className="font-tasa text-sm md:text-base flex flex-col gap-4 justify-center items-start w-full">
-                            <div className="flex justify-center items-center gap-2">
+                            <a href="https://x.com/_himanshu_108" target="_blank" className="flex justify-center items-center gap-2 hover:text-black">
                                 <FaTwitter size={25} /> Twitter
-                            </div>
-                            <div className="flex justify-center items-center gap-2">
+                            </a>
+                            <a href="https://github.com/himanshu1081" target="_blank" className="flex justify-center items-center gap-2 hover:text-black">
                                 <FaGithub size={25} /> Github
-                            </div>
-                            <div className="flex justify-center items-center gap-2">
+                            </a>
+                            <a href="https://www.linkedin.com/in/himanshu1081" target="_blank" className="flex justify-center items-center gap-2 hover:text-black">
                                 <FaLinkedin size={25} /> LinkedIn
-                            </div>
+                            </a>
                         </motion.div>
                     </div>
-                    <div className="font-inter-display-bold">
+                    <div className="font-inter-display-bold w-4/4">
                         <motion.p
-                            className="text-xl whitespace-nowrap p-5 md:text-4xl lg:text-6xl"
+                            className="text-xl whitespace-nowrap p-5 md:text-4xl lg:text-6xl justify-end flex items-center"
                             initial={{ opacity: 0, y: "10%" }}
                             animate={{ opacity: 1, y: "0%" }}
                             transition={{ duration: 1, delay: .5 }}>
-                            //Web Developer
+                            <TextType
+                                text={["//Web Developer","//Frontend Developer","//Backend Developer"]}
+                                typingSpeed={75}
+                                pauseDuration={3000}
+                                showCursor={true}
+                                cursorCharacter="/"
+                            />
                         </motion.p>
+
                         <motion.div className="flex justify-end items-end w-full "
                             initial={{ opacity: 0, y: "10%" }}
                             animate={{ opacity: 1, y: "0%" }}

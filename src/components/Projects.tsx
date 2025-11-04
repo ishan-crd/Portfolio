@@ -1,4 +1,4 @@
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../utility/ProjectCard";
 import { motion, useScroll } from "motion/react"
 import { use, useEffect, useRef } from "react";
 import { MotionValue } from "framer-motion"
@@ -29,7 +29,7 @@ const Cards: CardProps[] = [
     }, {
         "sno": 2,
         "projectName": "Portfolio",
-        "image": ["src/assets/images/portfolio1.png", "src/assets/images/portfolio2.png", "src/assets/images/portfolio3.png", "src/assets/images/portfolio4.png",],
+        "image": ["src/assets/images/portfolio.png","src/assets/images/portfolio1.png", "src/assets/images/portfolio2.png", "src/assets/images/portfolio3.png", "src/assets/images/portfolio4.png",],
         "githubLink": "https://github.com/himanshu1081/portfolio",
         "date": "November 2025",
         "deployLink": "https://himanshu-portfolio.vercel.app",
@@ -38,7 +38,7 @@ const Cards: CardProps[] = [
     {
         "sno": 3,
         "projectName": "Greenstone London",
-        "image": ["src/assets/images/greenstone1.png", "src/assets/images/greenstone2.png"],
+        "image": ["src/assets/images/greenstone.jpg","src/assets/images/greenstone1.png", "src/assets/images/greenstone2.png"],
         "githubLink": "https://github.com/himanshu1081/GreenstoneLondon",
         "date": "October 2025",
         "deployLink": "https://greenstone-london-ju93.vercel.app",
@@ -54,11 +54,6 @@ export default function ScrollStack() {
         target: containRef,
         offset: ["start start", "end end"]
     })
-    useEffect(() => {
-        scrollYProgress.on("change", e => {
-            console.log(scrollYProgress.current)
-        })
-    }, [scrollYProgress])
     return (
         <>
             <div

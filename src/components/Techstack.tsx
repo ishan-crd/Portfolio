@@ -3,7 +3,7 @@ import type { MotionProps } from "framer-motion";
 
 
 import "../index.css"
-import List from "./List";
+import List from "../utility/List";
 
 import { useRef, useState, useEffect } from "react";
 
