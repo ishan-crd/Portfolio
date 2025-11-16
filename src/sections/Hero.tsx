@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
 
     const handleDownload = (): void => {
         const link = document.createElement('a');
-        link.href = "/files/resume.pdf";
+        link.href = "/files/resume_himanshu.pdf";
         link.download = 'Himanshu_Resume.pdf';
         link.click();
     };
