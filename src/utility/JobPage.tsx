@@ -13,14 +13,41 @@ type Props = {
 const JobPage: React.FC<Props> = ({ company }) => {
   const { logo, job, text, client, techStack } = company;
   const isEdwance = client === "Edwance.ai";
+  const isDenShow = client === "Den.Show";
+  const isInsyd = client === "Insyd";
   const logoSize = isEdwance ? "w-[220px] h-[80px]" : "w-[110px] h-[40px]";
+
+  // Determine the link URL based on client
+  const getClientLink = () => {
+    if (isDenShow) return "https://den.show/";
+    if (isEdwance) return "https://edwance.ai/";
+    if (isInsyd) return "https://insyd.in/";
+    return null;
+  };
+
+  const clientLink = getClientLink();
+  const LogoComponent = clientLink ? (
+    <a href={clientLink} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-80 transition-opacity">
+      <img src={logo} alt="logo" className={`${logoSize} object-contain ${isEdwance ? 'mb-0' : ''}`} />
+    </a>
+  ) : (
+    <img src={logo} alt="logo" className={`${logoSize} object-contain ${isEdwance ? 'mb-0' : ''}`} />
+  );
+
+  const ClientComponent = clientLink ? (
+    <a href={clientLink} target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-80 transition-opacity">
+      <p className="mb-6 font-extralight">{client}</p>
+    </a>
+  ) : (
+    <p className="mb-6 font-extralight">{client}</p>
+  );
 
   return (
     <div className="w-full px-16 lg:px-32 xl:px-48 2xl:px-64 py-16 max-w-screen-2xl mx-auto">
       <div className="flex gap-20 items-start justify-between">
         {/* Left: Logo & Description */}
         <div className="flex-1">
-          <img src={logo} alt="logo" className={`${logoSize} object-contain ${isEdwance ? 'mb-0' : ''}`} />
+          {LogoComponent}
           <p className={`text-white text-3xl xl:text-3xl ${isEdwance ? 'mt-2' : 'mt-6'} mb-6 font-bold font-mono`}>
             {job}
           </p>
@@ -39,7 +66,7 @@ const JobPage: React.FC<Props> = ({ company }) => {
           style={{ fontFamily: "Montserrat" }}
         >
           <p className="font-black mb-1">CLIENT</p>
-          <p className="mb-6 font-extralight">{client}</p>
+          {ClientComponent}
 
           <p className="font-black mb-1">TECH STACK</p>
           <div className="space-y-1">
