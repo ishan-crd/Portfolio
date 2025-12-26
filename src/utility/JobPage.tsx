@@ -15,6 +15,7 @@ const JobPage: React.FC<Props> = ({ company }) => {
   const isEdwance = client === "Edwance.ai";
   const isDenShow = client === "Den.Show";
   const isInsyd = client === "Insyd";
+  const isUnmesa = client === "Unmesa.ai";
   const logoSize = isEdwance ? "w-[220px] h-[80px]" : "w-[110px] h-[40px]";
 
   // Determine the link URL based on client
@@ -22,6 +23,7 @@ const JobPage: React.FC<Props> = ({ company }) => {
     if (isDenShow) return "https://den.show/";
     if (isEdwance) return "https://edwance.ai/";
     if (isInsyd) return "https://insyd.in/";
+    if (isUnmesa) return "https://unmesa.app/";
     return null;
   };
 

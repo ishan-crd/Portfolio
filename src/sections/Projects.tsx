@@ -118,7 +118,7 @@ const projects: ProjectData[] = [
       "/images/unmesa/unmesa-post3.png",
     ],
     githubLink: "https://github.com/ishan-crd",
-    deployLink: "#",
+    deployLink: "https://unmesa.app/",
     about: "Designed and developed a comprehensive AI-powered platform that revolutionizes how businesses interact with artificial intelligence, featuring intuitive UI and powerful functionality.",
     date: "2024 - 2025",
   },
