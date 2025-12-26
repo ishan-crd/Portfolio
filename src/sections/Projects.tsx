@@ -32,7 +32,7 @@ const projects: ProjectData[] = [
         "Led wallet integrations by connecting multiple Web3 wallets and implementing secure on-chain payment and tipping logic, enabling creators to receive real-time support directly from viewers. Designed and developed clipping functionality using Mux Player, allowing users to create and share stream highlights effortlessly.",
       ],
       client: "Den.Show",
-      techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Web3", "PWA"],
+      techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Mux Player API", "Web3 Wallets", "Alchemy"],
     },
     PageComponent: Denpage,
   },
