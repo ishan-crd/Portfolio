@@ -1,6 +1,6 @@
-# 🌐 Himanshu Chaudhary — Portfolio
+# 🌐 Ishan Gupta — Portfolio
 
-> A personal portfolio website built to showcase my projects, skills, and journey as a **Full Stack Developer**.
+> A personal portfolio website built to showcase my projects, skills, and journey as a **Full Stack Developer & UI/UX Designer**.
 
 ---
 
@@ -51,7 +51,7 @@ To run this project locally:
 
 ```bash
 # Clone the repo
-git clone https://github.com/himanshu1081/portfolio.git
+git clone https://github.com/ishan-crd/portfolio.git
 
 # Move into folder
 cd portfolio
@@ -69,7 +69,7 @@ Now open [http://localhost:5173](http://localhost:5173) 🚀
 
 ## 🌍 Deployment
 
-Deployed on **Vercel** → [View Live](https://himanshu-chaudhary-portfolio.vercel.app/)
+Deployed on **Vercel** → [View Live](https://ishan-gupta-portfolio.vercel.app/)
 
 To redeploy:
 1. Commit your latest changes  
@@ -90,19 +90,13 @@ To redeploy:
 
 ## 🧑‍💻 Author
 
-**Himanshu Chaudhary**  
-BCA @ JIIT | **Full Stack Developer** | Tech Explorer  
-📍 Noida, India  
+**Ishan Gupta**  
+**Full Stack Developer & UI/UX Designer** | Tech Explorer  
 
-- Instagram: [@hiwnshuuu](https://www.instagram.com/hiwnshuuu/)  
-- GitHub: [himanshu1081](https://github.com/himanshu1081)  
-- LinkedIn: [himanshu1081](https://www.linkedin.com/in/himanshu1081/)
-
----
-
-## 🪄 Quote
-
-> “I am unemployed.” — *Himanshu Chaudhary*
+- GitHub: [ishan-crd](https://github.com/ishan-crd)  
+- LinkedIn: [ishan-gupta-5b0a20293](https://www.linkedin.com/in/ishan2131/)  
+- Twitter: [@ishancrd](https://x.com/ishancrd)  
+- Email: ishangupta3121@gmail.com
 
 ---
 

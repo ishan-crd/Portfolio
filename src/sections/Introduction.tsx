@@ -44,7 +44,7 @@ const Introduction: React.FC = () => {
                         viewport={{ once: true}}>
                         <a 
                         className="px-2 py-1 md:px-5 md:py-2 rounded-md border-2 w-fit h-fit flex justify-center items-center gap-1 hover:bg-black transition-all ease-in duration-75 hover:text-white cursor-pointer  text-xs md:text-base m-5"
-                        href="https://github.com/himanshu1081"
+                        href="https://github.com/ishan-crd"
                         target="_black">
                             See my work!
                         </a>

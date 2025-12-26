@@ -56,7 +56,36 @@
   --font-dm-mono: "DM Mono", sans-serif;
 }
 
+/* Fonts from portfolio-old */
+@font-face {
+  font-family: 'Basis33';
+  src: url('/fonts/basis33.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Minecraft';
+  src: url('/fonts/Minecraft.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-basis33: 'Basis33', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-minecraft: 'Minecraft', monospace;
+}
 
 /* Tailwind v4 theme vars */
 @theme {

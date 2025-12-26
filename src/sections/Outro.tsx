@@ -21,7 +21,7 @@ const Outro: React.FC = () => {
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1.1 }}
                         transition={{ duration: 1 }}>
-                        <img src={me1} alt="Cool Animation" className="flex justify-center items-center w-70 h-70 md:h-90 lg:h-100 object-cover" />
+                        <img src={me1} alt="Cool Animation" className="flex justify-center items-center w-60 h-60 md:h-90 lg:h-100 object-cover" />
                     </motion.div>
                 </div>
                 <div className="flex justify-center items-center flex-col gap-2">
@@ -37,12 +37,13 @@ const Outro: React.FC = () => {
                             initial={{ opacity: 0, y: "20%" }}
                             whileInView={{ opacity: 1, y: "0%" }}
                             transition={{ duration: .5, delay: .4 }}
+                            href="mailto:ishangupta3121@gmail.com"
                             className="whitespace-nowrap font-semibold text-sm lg:text-xl">
-                            Email : himanshuatwork02@gmail.com
+                            Email : ishangupta3121@gmail.com
                         </motion.a>
                         <div className="flex items-center justify-around text-4xl w-full">
                             <motion.a
-                                href="https://github.com/himanshu1081"
+                                href="https://github.com/ishan-crd"
                                 target="_blank"
                                 initial={{ opacity: 0, y: "20%" }}
                                 whileInView={{ opacity: 1, y: "0%" }}
@@ -51,16 +52,7 @@ const Outro: React.FC = () => {
                                 <FaSquareGithub />
                             </motion.a>
                             <motion.a
-                                href="https://www.instagram.com/hiwnshuuu"
-                                target="_blank"
-                                initial={{ opacity: 0, y: "20%" }}
-                                whileInView={{ opacity: 1, y: "0%" }}
-                                transition={{ duration: .5, delay: .8 }}
-                                className="whitespace-nowrap hover:text-black hover:scale-105 transition-all ease-in duration-75 cursor-pointer">
-                                <FaSquareInstagram />
-                            </motion.a>
-                            <motion.a
-                                href="https://www.linkedin.com/in/himanshu1081"
+                                href="https://www.linkedin.com/in/ishan2131/"
                                 target="_blank"
                                 initial={{ opacity: 0, y: "20%" }}
                                 whileInView={{ opacity: 1, y: "0%" }}
@@ -69,7 +61,7 @@ const Outro: React.FC = () => {
                                 <FaLinkedin />
                             </motion.a>
                             <motion.a
-                                href="https://x.com/_himanshu_108"
+                                href="https://x.com/ishancrd"
                                 target="_blank"
                                 initial={{ opacity: 0, y: "20%" }}
                                 whileInView={{ opacity: 1, y: "0%" }}
