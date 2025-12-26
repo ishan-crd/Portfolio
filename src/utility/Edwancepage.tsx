@@ -7,7 +7,7 @@ const Edwancepage: React.FC = () => {
       {/* Image */}
       <div className="absolute inset-0 flex justify-center items-center z-10">
         <img
-          src="/images/edwance/edwance-landing.png"
+          src="/images/edwance/edwance-landingnobg.png"
           alt="edwance-landing"
           className="w-full max-w-4xl h-auto object-contain"
         />
