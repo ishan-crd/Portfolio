@@ -10,7 +10,7 @@ import Outro from './sections/Outro'
 
 function App() {
   // Initialize Lenis
-  const _lenis = new Lenis({
+  new Lenis({
     autoRaf: true,
   });
 

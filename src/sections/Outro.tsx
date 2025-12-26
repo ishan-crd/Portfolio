@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 //icons
 import { FaArrowUp, FaLinkedin } from "react-icons/fa";
-import { FaSquareGithub, FaSquareInstagram, FaSquareXTwitter } from "react-icons/fa6";
+import { FaSquareGithub, FaSquareXTwitter } from "react-icons/fa6";
 import me1 from "../assets/videos/me1.gif";
 
 

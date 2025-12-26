@@ -7,7 +7,6 @@ interface ListProps {
 }
 
 const List: React.FC<ListProps> = ({ sno, name, logo }) => {
-    const delay: number = sno / 10;
     return (
         <>
             <motion.div

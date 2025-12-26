@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useTransform } from "framer-motion";
 import { useState, useRef } from "react";
 import { MotionValue } from "framer-motion"
 
@@ -21,7 +21,7 @@ interface CardProps {
     target: Array<number>
 }
 
-const ProjectCard: React.FC<CardProps> = ({ projectName, image, githubLink, deployLink, about, date, containerProgressY, range, target }) => {
+const ProjectCard: React.FC<CardProps> = ({ projectName, image, githubLink, deployLink, about, date, containerProgressY, range }) => {
     const [currentImage, setCurrentImage] = useState<number>(0)
 
     const cardRef = useRef(null);
