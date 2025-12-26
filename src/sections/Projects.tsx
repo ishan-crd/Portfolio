@@ -8,6 +8,7 @@ import Unmesapage from "../utility/Unmesapage";
 import Cradlepage from "../utility/Cradlepage";
 import Insydpage from "../utility/Insydpage";
 import ProjectSection from "../utility/ProjectSection";
+import ProjectCard from "../utility/ProjectCard";
 
 type Company = {
   logo: string;
@@ -20,6 +21,13 @@ type Company = {
 type ProjectData = {
   company: Company;
   PageComponent: React.FC;
+  // Mobile card data
+  projectName: string;
+  image: string[];
+  githubLink: string;
+  deployLink: string;
+  about: string;
+  date: string;
 };
 
 const projects: ProjectData[] = [
@@ -35,6 +43,18 @@ const projects: ProjectData[] = [
       techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Mux Player API", "Web3 Wallets", "Alchemy"],
     },
     PageComponent: Denpage,
+    projectName: "Den.Show",
+    image: [
+      "/images/denshow/denshow.png",
+      "/images/denshow/denshow2.png",
+      "/images/denshow/denshow3.png",
+      "/images/denshow/denshow4phone.png",
+      "/images/denshow/denshow5phone.png",
+    ],
+    githubLink: "https://github.com/ishan-crd",
+    deployLink: "#",
+    about: "Worked on chain as a full stack developer, developed the entire frontend of product including the PWA from scratch. Built a cutting-edge Web3 streaming platform with seamless blockchain integration, delivering a responsive and performant progressive web application that provides users with an immersive viewing experience across all devices.",
+    date: "October 2025 - December 2025",
   },
   {
     company: {
@@ -48,6 +68,14 @@ const projects: ProjectData[] = [
       techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
     },
     PageComponent: Edwancepage,
+    projectName: "Edwance.ai",
+    image: [
+      "/images/edwance/edwance-landingnobg.png",
+    ],
+    githubLink: "https://github.com/ishan-crd",
+    deployLink: "#",
+    about: "End-to-end design and development of Edwance.ai's landing page and dashboard, while driving the product's growth from concept to a fully scaled service.",
+    date: "July 2025 - October 2025",
   },
   {
     company: {
@@ -61,6 +89,14 @@ const projects: ProjectData[] = [
       techStack: ["React Native", "TypeScript", "Nativewind"],
     },
     PageComponent: Tanglepage,
+    projectName: "Tangle",
+    image: [
+      "/images/tangle/tangle-desnobg.png",
+    ],
+    githubLink: "https://github.com/ishan-crd",
+    deployLink: "#",
+    about: "Led the end-to-end design and development of Tangle's MVP, transforming the idea from concept to a functional, user-ready product.",
+    date: "July 2025 - Ongoing",
   },
   {
     company: {
@@ -74,6 +110,17 @@ const projects: ProjectData[] = [
       techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
     },
     PageComponent: Unmesapage,
+    projectName: "Unmesa.ai",
+    image: [
+      "/images/unmesa/unmesa-laptop.png",
+      "/images/unmesa/unmesa-post1.png",
+      "/images/unmesa/unmesa-post2.png",
+      "/images/unmesa/unmesa-post3.png",
+    ],
+    githubLink: "https://github.com/ishan-crd",
+    deployLink: "#",
+    about: "Designed and developed a comprehensive AI-powered platform that revolutionizes how businesses interact with artificial intelligence, featuring intuitive UI and powerful functionality.",
+    date: "2024 - 2025",
   },
   {
     company: {
@@ -87,6 +134,16 @@ const projects: ProjectData[] = [
       techStack: ["React.js", "CSS", "Javascript"],
     },
     PageComponent: Cradlepage,
+    projectName: "Cradle Clothing",
+    image: [
+      "/images/cradle/cradle.png",
+      "/images/cradle/cradle-laptop.png",
+      "/images/cradle/cradle-phone.png",
+    ],
+    githubLink: "https://github.com/ishan-crd",
+    deployLink: "#",
+    about: "Completely responsive E-Commerce platform for modern gym apparel selling along with complete design and checkout functionality.",
+    date: "2024 - 2025",
   },
   {
     company: {
@@ -100,6 +157,17 @@ const projects: ProjectData[] = [
       techStack: ["React Native", "JavaScript"],
     },
     PageComponent: Insydpage,
+    projectName: "Insyd",
+    image: [
+      "/images/insyd/insyd.png",
+      "/images/insyd/insyd1.png",
+      "/images/insyd/insyd2.png",
+      "/images/insyd/insyd3.png",
+    ],
+    githubLink: "https://github.com/ishan-crd",
+    deployLink: "#",
+    about: "Revolutionary clubbing access app making nightlife more inclusive and accessible for everyone, with real-time venue information.",
+    date: "March 2025 - June 2025",
   },
 ];
 
@@ -127,8 +195,35 @@ export default function ScrollStack() {
                         </span>
                     </span>
                 </motion.div>
-                <div className="w-full mt-50 mb-50" >
-                    <div className="flex flex-col gap-50 justify-center items-center w-full" ref={containRef}>
+                <div className="w-full mt-50 mb-50" ref={containRef}>
+                    {/* Mobile View - Project Cards */}
+                    <div className="flex md:hidden flex-col gap-50 justify-center items-center w-full">
+                        {projects.map((project, index) => {
+                            const totalProjects = projects.length;
+                            const rangeStart = index / totalProjects;
+                            const rangeEnd = (index + 1) / totalProjects;
+                            const range: [number, number] = [rangeStart, rangeEnd];
+                            const target: Array<number> = [5];
+
+                            return (
+                                <ProjectCard
+                                    key={index}
+                                    image={project.image}
+                                    projectName={project.projectName}
+                                    githubLink={project.githubLink}
+                                    deployLink={project.deployLink}
+                                    about={project.about}
+                                    date={project.date}
+                                    containerProgressY={scrollYProgress}
+                                    range={range}
+                                    target={target}
+                                />
+                            );
+                        })}
+                    </div>
+
+                    {/* Desktop View - Individual Project Pages */}
+                    <div className="hidden md:flex flex-col gap-50 justify-center items-center w-full">
                         {projects.map((project, index) => {
                             const totalProjects = projects.length;
                             const rangeStart = index / totalProjects;
