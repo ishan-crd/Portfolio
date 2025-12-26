@@ -31,46 +31,56 @@ const backendFrameworks: Framework[] = [
   },
   {
     sno: 4,
-    name: "JWT",
-    logo: "https://jwt.io/img/pic_logo.svg",
+    name: "PostgreSQL",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg",
+  },
+  {
+    sno: 5,
+    name: "Firebase",
+    logo: "/svg/firebaselogo.png",
+  },
+  {
+    sno: 6,
+    name: "Convex",
+    logo: "https://www.convex.dev/favicon.ico",
   },
 ];
 
 const frontendFrameworks: Framework[] = [
   {
     sno: 1,
-    name: "HTML",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
-  },
-  {
-    sno: 2,
-    name: "CSS",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
-  },
-  {
-    sno: 3,
-    name: "JavaScript",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-  },
-  {
-    sno: 4,
-    name: "TypeScript",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-  },
-  {
-    sno: 5,
-    name: "React",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-  },
-  {
-    sno: 6,
     name: "Next.js",
     logo: "/svg/next-js-svgrepo-com.svg",
   },
   {
-    sno: 7,
+    sno: 2,
+    name: "React",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+  },
+  {
+    sno: 3,
+    name: "TypeScript",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
+  },
+  {
+    sno: 4,
+    name: "JavaScript",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+  },
+  {
+    sno: 5,
     name: "Tailwind CSS",
     logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+  },
+  {
+    sno: 6,
+    name: "Prisma",
+    logo: "/svg/prismalogo.png",
+  },
+  {
+    sno: 7,
+    name: "Zustand",
+    logo: "/svg/zustand.jpg",
   },
 ];
 
@@ -87,8 +97,8 @@ const tools: Framework[] = [
   },
   {
     sno: 3,
-    name: "VS Code",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg",
+    name: "Docker",
+    logo: "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.svg",
   },
   {
     sno: 4,
@@ -102,8 +112,13 @@ const tools: Framework[] = [
   },
   {
     sno: 6,
-    name: "npm",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg",
+    name: "AWS",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+  },
+  {
+    sno: 7,
+    name: "Firebase",
+    logo: "https://firebase.google.com/downloads/brand-guidelines/PNG/logo-logomark.png",
   },
 ];
 
@@ -120,23 +135,23 @@ const otherTools: Framework[] = [
   },
   {
     sno: 3,
-    name: "Redux",
-    logo: "/svg/redux-svgrepo-com.svg",
+    name: "Mux Player",
+    logo: "https://www.mux.com/favicon.ico",
   },
   {
     sno: 4,
-    name: "ChatGPT",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+    name: "Alchemy",
+    logo: "/svg/alchemy.svg",
   },
   {
     sno: 5,
-    name: "Gemini",
-    logo: "/svg/gemini-color.svg",
+    name: "Privy",
+    logo: "/svg/privy.png",
   },
   {
     sno: 6,
-    name: "Framer Motion",
-    logo: "/svg/Motion_Logo_0.svg",
+    name: "LiveKit",
+    logo: "https://livekit.io/favicon.ico",
   },
 ];
 
