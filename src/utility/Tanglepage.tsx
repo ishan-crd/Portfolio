@@ -7,7 +7,7 @@ const Tanglepage: React.FC = () => {
       {/* Image */}
       <div className="absolute inset-0 flex justify-center items-center z-10">
         <img
-          src="/images/tangle-des.png"
+          src="/images/tangle/tangle-des.png"
           alt="tangle-desktop"
           className="w-full max-w-4xl h-auto object-contain"
         />
