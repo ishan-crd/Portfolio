@@ -95,28 +95,28 @@ const tools: Framework[] = [
     name: "GitHub",
     logo: "/svg/github.svg",
   },
+  // {
+  //   sno: 3,
+  //   name: "Docker",
+  //   logo: "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.svg",
+  // },
   {
     sno: 3,
-    name: "Docker",
-    logo: "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.svg",
-  },
-  {
-    sno: 4,
     name: "Postman",
     logo: "/svg/postman-icon-svgrepo-com.svg",
   },
   {
-    sno: 5,
+    sno: 4,
     name: "Figma",
     logo: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
   },
   {
-    sno: 6,
+    sno: 5,
     name: "AWS",
     logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
   },
   {
-    sno: 7,
+    sno: 6,
     name: "Firebase",
     logo: "https://firebase.google.com/downloads/brand-guidelines/PNG/logo-logomark.png",
   },
