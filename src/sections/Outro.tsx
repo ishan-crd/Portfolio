@@ -21,7 +21,7 @@ const Outro: React.FC = () => {
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1.1 }}
                         transition={{ duration: 1 }}>
-                        <img src={me1} alt="Cool Animation" className="flex justify-center items-center w-60 h-60 md:h-90 lg:h-100 object-cover" />
+                        <img src={me1} alt="Cool Animation" className="flex justify-center items-center w-40 h-40 md:w-60 md:h-60 lg:h-90 xl:h-100 object-cover" />
                     </motion.div>
                 </div>
                 <div className="flex justify-center items-center flex-col gap-2">
