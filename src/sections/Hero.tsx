@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="mt-6 md:mt-8">
                             <TextType
-                                text={["//Full Stack Developer","//UI/UX Designer","//Frontend Developer"]}
+                                text={["//Full Stack Developer","//UI/UX Designer"]}
                                 typingSpeed={75}
                                 pauseDuration={3000}
                                 showCursor={true}
