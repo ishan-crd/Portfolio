@@ -12,8 +12,8 @@ const Hero: React.FC = () => {
 
     const handleDownload = (): void => {
         const link = document.createElement('a');
-        link.href = "/IshanGupta_FullStackDev.pdf";
-        link.download = 'IshanGupta_FullStackDev.pdf';
+        link.href = "/IshanGupta_Resume.pdf";
+        link.download = 'IshanGupta_Resume';
         link.click();
     };
 
